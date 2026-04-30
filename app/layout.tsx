@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = "https://roldan-eng-software.github.io/roldan-page/";
 const ogImageUrl = "/og-image.png";
 
 const inter = Inter({
