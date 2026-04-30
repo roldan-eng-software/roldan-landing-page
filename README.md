@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roldan Eng Software
 
-## Getting Started
+Landing page institucional da Roldan Eng Software, criada para apresentar serviços de desenvolvimento fullstack, stack técnica, referências de projetos e canais de contato.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 16 com App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Jest e React Testing Library
+
+## Estrutura
+
+```text
+app/
+  _components/        Componentes específicos da home
+  __tests__/          Testes da página principal
+  layout.tsx          Metadata, fontes e JSON-LD
+  page.tsx            Composição da landing page
+components/           Componentes compartilhados
+public/               Assets estáticos, robots e sitemap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev      # inicia o servidor local
+npm run lint     # executa ESLint
+npm test         # executa Jest
+npm run build    # gera build de produção
+npm run start    # serve o build de produção
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Desenvolvimento
 
-## Learn More
+Instale as dependências e rode o servidor local:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A aplicação fica disponível em `http://localhost:3000`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Validação
 
-## Deploy on Vercel
+Antes de publicar alterações, execute:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run lint
+npm test
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Conteúdo e SEO
+
+Os metadados principais ficam em `app/layout.tsx`, incluindo Open Graph, robots e JSON-LD. O sitemap e o robots estáticos ficam em `public/sitemap.xml` e `public/robots.txt`.
+
+Os componentes de seção da landing ficam colocalizados em `app/_components`, seguindo as regras do projeto para componentes usados apenas por uma rota.
+
+## Decisões Técnicas
+
+Shadcn UI e Radix UI não foram adicionados nesta fase porque a interface atual é uma landing page estática, composta por HTML semântico, links e estilos Tailwind. Eles devem ser introduzidos quando houver formulários, diálogos, menus, abas, popovers ou outros componentes interativos que se beneficiem dos padrões de acessibilidade dessas bibliotecas.
+
+O `npm audit` reporta uma vulnerabilidade moderada em `postcss@8.4.31` trazida internamente por `next@16.2.4`. O pacote `postcss` usado diretamente pelo Tailwind já está em versão corrigida (`8.5.10`). A correção automática sugerida pelo npm exige `npm audit fix --force` e tenta trocar o Next para uma versão antiga e quebrável, então não deve ser aplicada. A pendência deve ser revisitada quando houver uma versão do Next que atualize essa dependência interna.

@@ -81,8 +81,9 @@ Code Quality
 
 Component Libraries
 
-- Use Shadcn UI for consistent, accessible component design.
-- Integrate Radix UI primitives for customizable, accessible UI elements.
+- Use Shadcn UI for consistent, accessible component design when building reusable controls, forms, dialogs, menus, tabs, accordions, popovers, or other interactive product UI.
+- Integrate Radix UI primitives for customizable, accessible UI elements when the component needs managed focus, keyboard navigation, disclosure state, overlays, or ARIA behavior.
+- For simple static landing sections made only of semantic HTML, links, text, and TailwindCSS styling, avoid adding Shadcn/Radix as unused dependencies. Document this as a technical exception in the README.
 - Apply composition patterns to create modular, reusable components.
 
 # TypeScript First:

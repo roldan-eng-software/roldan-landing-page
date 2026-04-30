@@ -1,12 +1,9 @@
 ---
-trigger: always_on
----
----
 description: Guidelines for continuously improving Qoder rules based on emerging code patterns and best practices.
 globs: **/*
 alwaysApply: true
 ---
-## Rule Improvement Triggers
+# Rule Improvement Triggers
 
 - New code patterns not covered by existing rules
 - Repeated similar implementations across files
@@ -78,4 +75,4 @@ alwaysApply: true
 - Maintain links between related rules
 - Document breaking changes
 
-Follow [standard-rules.mdc](mdc:.qoder/rules/curs or-rules.mdc) for proper rule formatting and structure.
+Follow [standard-rules.mdc](mdc:.qoder/rules/standard-rules.mdc) for proper rule formatting and structure.
