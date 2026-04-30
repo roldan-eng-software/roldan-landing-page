@@ -1,57 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const projects = [
-  {
-    name: 'Projeto 1',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['Next.js', 'Tailwind CSS', 'PostgreSQL'],
-    projectUrl: '#',
-    githubUrl: '#',
-    image: '/images/projects/projeto-01.webp',
-  },
-  {
-    name: 'Projeto 2',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['React', 'Node.js', 'Supabase'],
-    projectUrl: '#',
-    githubUrl: '#',
-    image: '/images/projects/projeto-02.webp',
-  },
-  {
-    name: 'Projeto 3',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['Next.js', 'TypeScript', 'Neon'],
-    projectUrl: '#',
-    githubUrl: null,
-    image: '/images/projects/projeto-03.webp',
-  },
-  {
-    name: 'Projeto 4',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['React', 'Tailwind CSS', 'PostgreSQL'],
-    projectUrl: '#',
-    githubUrl: '#',
-    image: '/images/projects/projeto-04.webp',
-  },
-  {
-    name: 'Projeto 5',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['Next.js', 'Node.js', 'Docker'],
-    projectUrl: '#',
-    githubUrl: '#',
-    image: '/images/projects/projeto-05.webp',
-  },
-  {
-    name: 'Projeto 6',
-    description: 'Descrição do projeto em 1-2 frases.',
-    technologies: ['React', 'TypeScript', 'Vercel'],
-    projectUrl: '#',
-    githubUrl: null,
-    image: '/images/projects/projeto-06.webp',
-  },
-];
-
 const services = [
   {
     name: 'Landing pages',
@@ -226,48 +175,19 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-12 text-center">
               Projetos em Destaque
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((project) => (
-                <div key={project.name} className="bg-bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-200">
-                  <div className="aspect-video bg-bg-surface flex items-center justify-center">
-                    <span className="text-text-secondary text-sm">Screenshot do projeto</span>
-                  </div>
-                  <div className="p-6 flex flex-col h-full">
-                    <h3 className="text-xl font-semibold text-text-primary mb-2">{project.name}</h3>
-                    <p className="text-text-secondary mb-4 flex-grow">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <span key={tech} className="bg-bg-surface text-text-secondary px-3 py-1 rounded-full text-xs font-mono">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-3">
-                      <a
-                        href={project.projectUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-accent hover:bg-accent-hover text-white text-center px-4 py-2 rounded-lg transition-all duration-200 text-sm font-semibold"
-                      >
-                        Ver projeto ↗
-                      </a>
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`GitHub do projeto ${project.name}`}
-                          className="bg-bg-surface hover:bg-border text-text-primary px-4 py-2 rounded-lg transition-all duration-200"
-                        >
-                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 2.614.121.759-.211 1.585-.32 2.39-.326.805.006 1.632.115 2.39.326 1.606-.444 2.606-.122 2.606-.122.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                          </svg>
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-lg text-text-secondary leading-relaxed mb-8">
+                O portfólio público está sendo organizado com cases reais, capturas e links de produção.
+                Enquanto isso, posso apresentar referências de trabalhos e formatos de entrega em uma conversa rápida.
+              </p>
+              <a
+                href="https://wa.me/5516981442301?text=Ol%C3%A1%2C+gostaria+de+ver+refer%C3%AAncias+de+projetos."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-accent/20"
+              >
+                Ver referências por WhatsApp
+              </a>
             </div>
           </div>
         </section>
