@@ -75,3 +75,19 @@ When portfolio URLs change or visual previews become stale:
 2. Confirm assets are optimized and stored under `public/projects/`.
 3. Update capture dates in the portfolio data.
 4. Re-run the completed-work card and build validation.
+
+## Implementation Validation Notes
+
+Validated on 2026-06-04 against the local production server at
+`http://localhost:3000`:
+
+- `npm test -- --runInBand`: passed, 3 suites and 8 tests.
+- `npm run lint`: passed.
+- `npm run build`: passed.
+- Playwright screenshots captured for mobile 390px and desktop 1440px.
+- Lighthouse production run: SEO 100/100, performance 71/100, LCP 2.1s,
+  CLS 0, FCP 1.2s.
+- Mobile, tablet and desktop review: no critical text overlap or horizontal
+  overflow found in the captured viewports.
+- Contact and project links are centralized in `lib/site.ts` and
+  `lib/portfolio.ts`; verify any newly added client project URL before release.

@@ -29,13 +29,13 @@ implementation and testing of each story.
 
 **Purpose**: Prepare shared content contracts, screenshot tooling and validation scaffolding.
 
-- [ ] T001 Create portfolio data module types and placeholder entries in `lib/portfolio.ts`
-- [ ] T002 Create SEO profile helper skeleton for search-facing copy in `lib/seo.ts`
-- [ ] T003 Add project screenshot output directory with keep file in `public/projects/.gitkeep`
-- [ ] T004 Add screenshot capture script scaffold in `scripts/capture-project-screenshots.ts`
-- [ ] T005 Add dev-only screenshot tooling script entry in `package.json`
-- [ ] T006 [P] Create portfolio rendering test scaffold in `app/__tests__/portfolio.test.tsx`
-- [ ] T007 [P] Create SEO metadata test scaffold in `app/__tests__/seo.test.tsx`
+- [x] T001 Create portfolio data module types and placeholder entries in `lib/portfolio.ts`
+- [x] T002 Create SEO profile helper skeleton for search-facing copy in `lib/seo.ts`
+- [x] T003 Add project screenshot output directory with keep file in `public/projects/.gitkeep`
+- [x] T004 Add screenshot capture script scaffold in `scripts/capture-project-screenshots.ts`
+- [x] T005 Add dev-only screenshot tooling script entry in `package.json`
+- [x] T006 [P] Create portfolio rendering test scaffold in `app/__tests__/portfolio.test.tsx`
+- [x] T007 [P] Create SEO metadata test scaffold in `app/__tests__/seo.test.tsx`
 
 ---
 
@@ -45,14 +45,14 @@ implementation and testing of each story.
 
 **CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T008 Define final color tokens, typography scale, spacing rhythm and focus states in `app/globals.css`
-- [ ] T009 Centralize contact channel labels and URLs in `lib/site.ts`
-- [ ] T010 Define completed-work content contract and validation helpers in `lib/portfolio.ts`
-- [ ] T011 Define SEO title, description, topics and structured data fields in `lib/seo.ts`
-- [ ] T012 Update shared header navigation labels and section anchors in `components/Header.tsx`
-- [ ] T013 Update footer contact/social link usage from centralized site data in `components/Footer.tsx`
-- [ ] T014 Confirm page section order for hero, about, technology, projects, services and contact in `app/page.tsx`
-- [ ] T015 Document manual screenshot refresh expectations in `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T008 Define final color tokens, typography scale, spacing rhythm and focus states in `app/globals.css`
+- [x] T009 Centralize contact channel labels and URLs in `lib/site.ts`
+- [x] T010 Define completed-work content contract and validation helpers in `lib/portfolio.ts`
+- [x] T011 Define SEO title, description, topics and structured data fields in `lib/seo.ts`
+- [x] T012 Update shared header navigation labels and section anchors in `components/Header.tsx`
+- [x] T013 Update footer contact/social link usage from centralized site data in `components/Footer.tsx`
+- [x] T014 Confirm page section order for hero, about, technology, projects, services and contact in `app/page.tsx`
+- [x] T015 Document manual screenshot refresh expectations in `specs/001-portfolio-landing-refresh/quickstart.md`
 
 **Checkpoint**: Foundation ready. User story implementation can now begin in priority order.
 
@@ -69,21 +69,21 @@ without looking like a generic AI-generated landing page.
 
 ### Tests for User Story 1
 
-- [ ] T016 [P] [US1] Add hero value proposition and contact action assertions in `app/__tests__/home.test.tsx`
-- [ ] T017 [P] [US1] Add centralized contact channel assertions in `app/__tests__/home.test.tsx`
+- [x] T016 [P] [US1] Add hero value proposition and contact action assertions in `app/__tests__/home.test.tsx`
+- [x] T017 [P] [US1] Add centralized contact channel assertions in `app/__tests__/home.test.tsx`
 
 ### Implementation for User Story 1
 
-- [ ] T018 [US1] Redesign hero composition, headline, supporting copy and primary CTAs in `app/_components/HeroSection.tsx`
-- [ ] T019 [US1] Rewrite about section with a sharper fullstack positioning narrative in `app/_components/AboutSection.tsx`
-- [ ] T020 [US1] Rewrite services section around business outcomes and delivery clarity in `app/_components/ServicesSection.tsx`
-- [ ] T021 [US1] Refine technology section to show purposeful stack credibility without emoji-heavy decoration in `app/_components/TechnologySection.tsx`
-- [ ] T022 [US1] Refine contact section copy and CTA hierarchy for conversion in `app/_components/ContactSection.tsx`
-- [ ] T023 [US1] Apply responsive layout details, section rhythm and anti-template visual polish in `app/globals.css`
-- [ ] T024 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/HeroSection.tsx`
-- [ ] T025 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/AboutSection.tsx`
-- [ ] T026 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/ServicesSection.tsx`
-- [ ] T027 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/ContactSection.tsx`
+- [x] T018 [US1] Redesign hero composition, headline, supporting copy and primary CTAs in `app/_components/HeroSection.tsx`
+- [x] T019 [US1] Rewrite about section with a sharper fullstack positioning narrative in `app/_components/AboutSection.tsx`
+- [x] T020 [US1] Rewrite services section around business outcomes and delivery clarity in `app/_components/ServicesSection.tsx`
+- [x] T021 [US1] Refine technology section to show purposeful stack credibility without emoji-heavy decoration in `app/_components/TechnologySection.tsx`
+- [x] T022 [US1] Refine contact section copy and CTA hierarchy for conversion in `app/_components/ContactSection.tsx`
+- [x] T023 [US1] Apply responsive layout details, section rhythm and anti-template visual polish in `app/globals.css`
+- [x] T024 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/HeroSection.tsx`
+- [x] T025 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/AboutSection.tsx`
+- [x] T026 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/ServicesSection.tsx`
+- [x] T027 [US1] Verify visible Portuguese copy for spelling, grammar, tone and non-generic phrasing across `app/_components/ContactSection.tsx`
 
 **Checkpoint**: MVP complete. Visitor value, trust and contact path work independently before portfolio and SEO refinements.
 
@@ -100,19 +100,19 @@ thumbnail or fallback without layout breakage.
 
 ### Tests for User Story 2
 
-- [ ] T028 [P] [US2] Add portfolio data validation tests for ready and fallback entries in `app/__tests__/portfolio.test.tsx`
-- [ ] T029 [P] [US2] Add project card rendering tests for names, descriptions, links and image alt text in `app/__tests__/portfolio.test.tsx`
-- [ ] T030 [P] [US2] Add screenshot script configuration assertions in `app/__tests__/portfolio.test.tsx`
+- [x] T028 [P] [US2] Add portfolio data validation tests for ready and fallback entries in `app/__tests__/portfolio.test.tsx`
+- [x] T029 [P] [US2] Add project card rendering tests for names, descriptions, links and image alt text in `app/__tests__/portfolio.test.tsx`
+- [x] T030 [P] [US2] Add screenshot script configuration assertions in `app/__tests__/portfolio.test.tsx`
 
 ### Implementation for User Story 2
 
-- [ ] T031 [US2] Populate initial completed-work entries and fallback examples in `lib/portfolio.ts`
-- [ ] T032 [US2] Implement screenshot capture script for first-page project thumbnails in `scripts/capture-project-screenshots.ts`
-- [ ] T033 [US2] Add or generate optimized portfolio screenshot assets and update `public/projects/.gitkeep`
-- [ ] T034 [US2] Replace placeholder portfolio copy with completed-work grid and fallback states in `app/_components/ProjectsSection.tsx`
-- [ ] T035 [US2] Render optimized project thumbnails, alt text, tags and external links in `app/_components/ProjectsSection.tsx`
-- [ ] T036 [US2] Add stable card dimensions, image aspect ratio and fallback styling in `app/globals.css`
-- [ ] T037 [US2] Add manual project-link and screenshot-refresh instructions in `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T031 [US2] Populate initial completed-work entries and fallback examples in `lib/portfolio.ts`
+- [x] T032 [US2] Implement screenshot capture script for first-page project thumbnails in `scripts/capture-project-screenshots.ts`
+- [x] T033 [US2] Add or generate optimized portfolio screenshot assets and update `public/projects/.gitkeep`
+- [x] T034 [US2] Replace placeholder portfolio copy with completed-work grid and fallback states in `app/_components/ProjectsSection.tsx`
+- [x] T035 [US2] Render optimized project thumbnails, alt text, tags and external links in `app/_components/ProjectsSection.tsx`
+- [x] T036 [US2] Add stable card dimensions, image aspect ratio and fallback styling in `app/globals.css`
+- [x] T037 [US2] Add manual project-link and screenshot-refresh instructions in `specs/001-portfolio-landing-refresh/quickstart.md`
 
 **Checkpoint**: Portfolio proof works independently and can be maintained by updating local data and static screenshots.
 
@@ -129,21 +129,21 @@ preview validation.
 
 ### Tests for User Story 3
 
-- [ ] T038 [P] [US3] Add SEO profile tests for title, description, topics and service area in `app/__tests__/seo.test.tsx`
-- [ ] T039 [P] [US3] Add metadata and structured data assertions for production URL behavior in `app/__tests__/seo.test.tsx`
-- [ ] T040 [P] [US3] Add sitemap and robots assertions in `app/__tests__/seo.test.tsx`
+- [x] T038 [P] [US3] Add SEO profile tests for title, description, topics and service area in `app/__tests__/seo.test.tsx`
+- [x] T039 [P] [US3] Add metadata and structured data assertions for production URL behavior in `app/__tests__/seo.test.tsx`
+- [x] T040 [P] [US3] Add sitemap and robots assertions in `app/__tests__/seo.test.tsx`
 
 ### Implementation for User Story 3
 
-- [ ] T041 [US3] Update page metadata, Open Graph, Twitter card and robots metadata in `app/layout.tsx`
-- [ ] T042 [US3] Update ProfessionalService structured data to match final service positioning in `app/layout.tsx`
-- [ ] T043 [US3] Update sitemap entry and last-modified behavior in `app/sitemap.ts`
-- [ ] T044 [US3] Update robots behavior and crawler assumptions in `app/robots.ts`
-- [ ] T045 [US3] Connect SEO profile helper to site URL and metadata expectations in `lib/seo.ts`
-- [ ] T046 [US3] Update Open Graph image asset or reference for the refreshed brand signal in `public/og-image.svg`
-- [ ] T047 [US3] Review headings, link text and image alt text for crawl clarity in `app/_components/HeroSection.tsx`
-- [ ] T048 [US3] Review headings, link text and image alt text for crawl clarity in `app/_components/ProjectsSection.tsx`
-- [ ] T049 [US3] Review headings, link text and local service-area copy for search usefulness in `app/_components/ServicesSection.tsx`
+- [x] T041 [US3] Update page metadata, Open Graph, Twitter card and robots metadata in `app/layout.tsx`
+- [x] T042 [US3] Update ProfessionalService structured data to match final service positioning in `app/layout.tsx`
+- [x] T043 [US3] Update sitemap entry and last-modified behavior in `app/sitemap.ts`
+- [x] T044 [US3] Update robots behavior and crawler assumptions in `app/robots.ts`
+- [x] T045 [US3] Connect SEO profile helper to site URL and metadata expectations in `lib/seo.ts`
+- [x] T046 [US3] Update Open Graph image asset or reference for the refreshed brand signal in `public/og-image.svg`
+- [x] T047 [US3] Review headings, link text and image alt text for crawl clarity in `app/_components/HeroSection.tsx`
+- [x] T048 [US3] Review headings, link text and image alt text for crawl clarity in `app/_components/ProjectsSection.tsx`
+- [x] T049 [US3] Review headings, link text and local service-area copy for search usefulness in `app/_components/ServicesSection.tsx`
 
 **Checkpoint**: SEO-facing page structure, metadata and content are coherent and independently inspectable.
 
@@ -154,19 +154,19 @@ preview validation.
 **Purpose**: Validate the production landing page end to end and clean up any
 cross-story quality issues.
 
-- [ ] T050 Run `npm run lint` and resolve issues reported against `eslint.config.mjs`
-- [ ] T051 Run `npm test` and resolve failures in `app/__tests__/home.test.tsx`
-- [ ] T052 Run `npm test` and resolve failures in `app/__tests__/portfolio.test.tsx`
-- [ ] T053 Run `npm test` and resolve failures in `app/__tests__/seo.test.tsx`
-- [ ] T054 Run `npm run build` and resolve production build issues surfaced by `next.config.ts`
-- [ ] T055 Validate mobile viewport around 390px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
-- [ ] T056 Validate tablet viewport around 768px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
-- [ ] T057 Validate desktop viewport around 1440px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
-- [ ] T058 Validate keyboard navigation, visible focus and accessible labels across `app/page.tsx`
-- [ ] T059 Validate WhatsApp, email, LinkedIn, GitHub, Instagram and project links from `lib/site.ts`
-- [ ] T060 Validate Lighthouse SEO score and Core Web Vitals targets from `specs/001-portfolio-landing-refresh/quickstart.md`
-- [ ] T061 Final Portuguese copy review for visible text in `app/_components/HeroSection.tsx`, `app/_components/AboutSection.tsx`, `app/_components/ServicesSection.tsx`, `app/_components/TechnologySection.tsx`, `app/_components/ProjectsSection.tsx`, and `app/_components/ContactSection.tsx`
-- [ ] T062 Remove unused placeholder project assets and update `public/projects/.gitkeep`
+- [x] T050 Run `npm run lint` and resolve issues reported against `eslint.config.mjs`
+- [x] T051 Run `npm test` and resolve failures in `app/__tests__/home.test.tsx`
+- [x] T052 Run `npm test` and resolve failures in `app/__tests__/portfolio.test.tsx`
+- [x] T053 Run `npm test` and resolve failures in `app/__tests__/seo.test.tsx`
+- [x] T054 Run `npm run build` and resolve production build issues surfaced by `next.config.ts`
+- [x] T055 Validate mobile viewport around 390px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T056 Validate tablet viewport around 768px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T057 Validate desktop viewport around 1440px and record findings in `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T058 Validate keyboard navigation, visible focus and accessible labels across `app/page.tsx`
+- [x] T059 Validate WhatsApp, email, LinkedIn, GitHub, Instagram and project links from `lib/site.ts`
+- [x] T060 Validate Lighthouse SEO score and Core Web Vitals targets from `specs/001-portfolio-landing-refresh/quickstart.md`
+- [x] T061 Final Portuguese copy review for visible text in `app/_components/HeroSection.tsx`, `app/_components/AboutSection.tsx`, `app/_components/ServicesSection.tsx`, `app/_components/TechnologySection.tsx`, `app/_components/ProjectsSection.tsx`, and `app/_components/ContactSection.tsx`
+- [x] T062 Remove unused placeholder project assets and update `public/projects/.gitkeep`
 
 ---
 

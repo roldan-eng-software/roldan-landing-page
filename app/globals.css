@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-base: #0A0A0F;
-  --color-bg-surface: #111118;
-  --color-bg-card: #16161E;
-  --color-border: #1E1E2A;
-  --color-text-primary: #F0F0F5;
-  --color-text-secondary: #8888A0;
-  --color-accent: #6366F1;
-  --color-accent-hover: #818CF8;
-  --color-highlight: #22D3EE;
+  --color-bg-base: #080A0F;
+  --color-bg-surface: #0E131B;
+  --color-bg-card: #121823;
+  --color-border: #243044;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #B8C2D8;
+  --color-text-muted: #7D8AA3;
+  --color-accent: #F97316;
+  --color-accent-hover: #FB923C;
+  --color-highlight: #38D5E8;
+  --color-highlight-soft: #8BE8F2;
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -23,9 +25,27 @@ body {
   background-color: var(--color-bg-base);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
 }
 
 *:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-highlight);
+  color: var(--color-bg-base);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.project-card {
+  min-height: 100%;
+}
+
+.project-preview {
+  aspect-ratio: 16 / 9;
 }

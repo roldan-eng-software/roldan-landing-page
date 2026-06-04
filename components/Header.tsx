@@ -2,14 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { contactChannels } from '@/lib/site';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { href: '#about', label: 'Sobre' },
-    { href: '#tech', label: 'Tecnologias' },
-    { href: '#projects', label: 'Projetos' },
+    { href: '#tech', label: 'Stack' },
+    { href: '#projects', label: 'Trabalhos' },
     { href: '#services', label: 'Serviços' },
     { href: '#contact', label: 'Contato' },
   ];
@@ -34,12 +35,12 @@ const Header = () => {
               </Link>
             ))}
             <a
-              href="https://wa.me/5516981442301?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-lg transition-all duration-200"
-            >
-              WhatsApp
+            href={contactChannels.whatsapp.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md bg-highlight px-4 py-2 font-semibold text-bg-base transition hover:bg-highlight-soft"
+          >
+              Orçamento
             </a>
           </div>
 
@@ -74,13 +75,13 @@ const Header = () => {
                 </Link>
               ))}
               <a
-                href="https://wa.me/5516981442301?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+                href={contactChannels.whatsapp.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-accent hover:bg-accent-hover text-white px-4 py-2 rounded-lg transition-all duration-200 text-center"
+                className="rounded-md bg-highlight px-4 py-2 text-center font-semibold text-bg-base transition hover:bg-highlight-soft"
               >
-                WhatsApp
+                Orçamento
               </a>
             </div>
           </div>

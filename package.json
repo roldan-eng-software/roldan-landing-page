@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "capture:projects": "npx tsx scripts/capture-project-screenshots.ts"
   },
   "dependencies": {
     "next": "16.2.4",
