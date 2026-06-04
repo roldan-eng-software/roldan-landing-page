@@ -11,7 +11,7 @@ export default function ProjectsSection() {
               Trabalhos realizados
             </p>
             <h2 className="mt-4 text-3xl font-black text-text-primary sm:text-5xl">
-              Projetos que mostram gosto, processo e entrega.
+              Projetos que mostram eficiência, processo e entrega.
             </h2>
             <p className="mt-5 text-lg leading-8 text-text-secondary">
               Cada card foi pensado para receber um link público e uma captura da

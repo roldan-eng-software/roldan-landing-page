@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="mx-auto grid min-h-[calc(100svh-4rem)] max-w-6xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-highlight/30 bg-highlight/10 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] text-highlight">
-            Desenvolvedor fullstack em São Carlos, SP
+            Desenvolvedor fullstack
           </p>
           <h1 className="max-w-4xl text-balance text-4xl font-black leading-[1.02] text-text-primary sm:text-6xl lg:text-7xl">
             Interfaces com gosto de produto. Código com cara de produção.
