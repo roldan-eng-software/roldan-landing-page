@@ -1,34 +1,36 @@
 import { render, screen } from '@testing-library/react';
 import Home from '../page';
+import { contactChannels } from '@/lib/site';
 
 describe('Home page', () => {
-  it('renders the main landing page sections and contact actions', () => {
+  it('renders the refreshed landing page sections and fullstack positioning', () => {
     render(<Home />);
 
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /desenvolvimento fullstack para landing pages/i,
+        name: /interfaces com gosto de produto/i,
       }),
     ).toBeInTheDocument();
 
-    expect(screen.getByRole('heading', { name: 'Sobre' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Tecnologias' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Projetos em Destaque' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Serviços' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Entre em Contato' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /fullstack para negócios/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /tecnologia aparece no resultado/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /projetos que mostram gosto/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /do primeiro clique/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /vamos transformar sua ideia/i })).toBeInTheDocument();
+  });
 
-    expect(screen.getAllByRole('link', { name: 'Solicitar orçamento' })[0]).toHaveAttribute(
+  it('renders primary contact actions from centralized channels', () => {
+    render(<Home />);
+
+    expect(screen.getAllByRole('link', { name: /solicitar orçamento/i })[0]).toHaveAttribute(
       'href',
-      expect.stringContaining('wa.me'),
+      contactChannels.whatsapp.href,
     );
-    expect(screen.getByRole('link', { name: 'Falar por e-mail' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /enviar briefing por e-mail/i })).toHaveAttribute(
       'href',
-      expect.stringContaining('mailto:roldan.eng.software@gmail.com'),
+      contactChannels.email.href,
     );
-    expect(screen.getByRole('link', { name: 'Ver referências por WhatsApp' })).toHaveAttribute(
-      'href',
-      expect.stringContaining('refer%C3%AAncias+de+projetos'),
-    );
+    expect(screen.getByRole('link', { name: /ver trabalhos/i })).toHaveAttribute('href', '#projects');
   });
 });

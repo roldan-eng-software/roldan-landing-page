@@ -4,9 +4,10 @@ import Script from "next/script";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { gaMeasurementId } from "@/lib/analytics";
 import { siteUrl } from "@/lib/site";
+import { buildProfessionalServiceJsonLd, seoProfile } from "@/lib/seo";
 import "./globals.css";
 
-const ogImageUrl = "/og-image.png";
+const ogImageUrl = seoProfile.ogImage;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,12 +23,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Roldan Eng Software | Desenvolvimento Fullstack · Landing Pages e Sistemas Web",
-  description: "Desenvolvimento fullstack para landing pages, sistemas e aplicações web. Atendo pequenas empresas e autônomos em São Carlos, São Paulo e todo o Brasil.",
-  keywords: ["desenvolvedor fullstack", "landing page", "sistema web", "React", "Next.js", "Node.js", "São Carlos", "São Paulo"],
+  title: seoProfile.title,
+  description: seoProfile.description,
+  keywords: [...seoProfile.topics],
   authors: [{ name: "Sandro Roldan" }],
   alternates: {
-    canonical: siteUrl,
+    canonical: seoProfile.canonicalUrl,
   },
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? {
@@ -35,8 +36,8 @@ export const metadata: Metadata = {
       }
     : undefined,
   openGraph: {
-    title: "Roldan Eng Software | Desenvolvimento Fullstack",
-    description: "Landing pages, sistemas e aplicações web modernas para pequenas empresas e autônomos.",
+    title: seoProfile.title,
+    description: seoProfile.description,
     type: "website",
     url: siteUrl,
     locale: "pt_BR",
@@ -52,13 +53,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roldan Eng Software | Desenvolvimento Fullstack",
-    description: "Landing pages, sistemas e aplicações web modernas para pequenas empresas e autônomos.",
+    title: seoProfile.title,
+    description: seoProfile.description,
     images: [ogImageUrl],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -74,9 +82,9 @@ export default function RootLayout({
         <Script
           id="google-tag-loader"
           src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-tag-init" strategy="beforeInteractive">
+        <Script id="google-tag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -87,25 +95,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "name": "Roldan Eng Software",
-              "description": "Desenvolvimento fullstack para landing pages, sistemas e aplicações web.",
-              "url": siteUrl,
-              "email": "roldan.eng.software@gmail.com",
-              "telephone": "+5516981442301",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "São Carlos",
-                "addressRegion": "SP",
-                "addressCountry": "BR"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/sandro-roldan-b8721a3b5/",
-                "https://github.com/roldan-eng-software"
-              ]
-            })
+            __html: JSON.stringify(buildProfessionalServiceJsonLd())
           }}
         />
       </head>

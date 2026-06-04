@@ -1,83 +1,63 @@
-import type { ReactNode } from 'react';
+import { contactChannels } from "@/lib/site";
 
-type Service = {
-  name: string;
-  description: string;
-  icon: ReactNode;
-};
-
-const services: Service[] = [
+const services = [
   {
-    name: 'Landing pages',
-    description: 'Páginas profissionais para produtos, serviços e negócios',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    name: "Landing pages autorais",
+    description:
+      "Páginas para serviços, produtos e campanhas com narrativa clara, design responsivo e estrutura pronta para busca orgânica.",
   },
   {
-    name: 'Sistemas web',
-    description: 'Aplicações com autenticação, banco de dados e lógica de negócio',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    name: "Sistemas web fullstack",
+    description:
+      "Aplicações com autenticação, banco de dados, integrações e fluxos internos pensados para reduzir retrabalho.",
   },
   {
-    name: 'Aplicações fullstack',
-    description: 'Projetos completos do front ao back, com deploy em produção',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
+    name: "Interfaces de produto",
+    description:
+      "Telas que organizam informação, guiam decisões e tornam ações importantes fáceis de encontrar.",
   },
   {
-    name: 'Interfaces modernas',
-    description: 'UI limpa, responsiva e focada em usabilidade',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-      </svg>
-    ),
-  },
-  {
-    name: 'Integrações',
-    description: 'APIs externas, pagamentos, banco de dados e serviços de nuvem',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
+    name: "Integrações e automações",
+    description:
+      "Conexões com APIs, pagamentos, armazenamento e serviços externos para transformar processo manual em fluxo confiável.",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-bg-base">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-12 text-center">
-          Serviços
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {services.map((service) => (
-            <div key={service.name} className="bg-bg-card border border-border rounded-xl p-6 hover:border-accent/50 transition-all duration-200">
-              <div className="text-accent mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-text-primary mb-2">{service.name}</h3>
-              <p className="text-text-secondary">{service.description}</p>
-            </div>
+    <section id="services" className="border-b border-border bg-bg-base py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="font-mono text-sm uppercase tracking-[0.18em] text-highlight">
+            Serviços
+          </p>
+          <h2 className="mt-4 text-3xl font-black text-text-primary sm:text-5xl">
+            Do primeiro clique ao sistema rodando.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-text-secondary">
+            Trabalho em entregas completas: estratégia da página, interface,
+            desenvolvimento, integração, SEO técnico e publicação.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          {services.map((service, index) => (
+            <article key={service.name} className="group rounded-lg border border-border bg-bg-card p-6 transition hover:border-highlight/60">
+              <p className="font-mono text-xs text-text-muted">0{index + 1}</p>
+              <h3 className="mt-5 text-2xl font-bold text-text-primary">{service.name}</h3>
+              <p className="mt-3 leading-7 text-text-secondary">{service.description}</p>
+            </article>
           ))}
         </div>
-        <div className="text-center">
+
+        <div className="mt-10">
           <a
-            href="https://wa.me/5516981442301?text=Ol%C3%A1%2C+gostaria+de+solicitar+um+or%C3%A7amento."
+            href={contactChannels.whatsapp.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-accent/20"
+            className="inline-flex min-h-12 items-center justify-center rounded-md bg-highlight px-6 py-3 font-semibold text-bg-base transition hover:bg-highlight-soft"
           >
-            Solicitar orçamento
+            Conversar sobre meu projeto
           </a>
         </div>
       </div>

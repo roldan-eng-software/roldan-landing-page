@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Prévia da landing page Roldan Eng Software</title>
+  <desc id="desc">Composição visual escura com título de desenvolvimento fullstack, cartões técnicos e ações de contato.</desc>
+  <rect width="1280" height="720" fill="#080A0F"/>
+  <rect x="64" y="52" width="1152" height="616" rx="26" fill="#10131B" stroke="#293142" stroke-width="2"/>
+  <rect x="96" y="86" width="1088" height="44" rx="14" fill="#151A24"/>
+  <circle cx="122" cy="108" r="7" fill="#F97316"/>
+  <circle cx="146" cy="108" r="7" fill="#22C55E"/>
+  <circle cx="170" cy="108" r="7" fill="#38BDF8"/>
+  <text x="212" y="114" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="18">roldan-landing.vercel.app</text>
+  <text x="112" y="214" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">Fullstack com design,</text>
+  <text x="112" y="284" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800">performance e SEO.</text>
+  <text x="112" y="342" fill="#B8C2D8" font-family="Inter, Arial, sans-serif" font-size="26">Landing pages, sistemas e aplicações web para negócios reais.</text>
+  <rect x="112" y="398" width="212" height="58" rx="14" fill="#22D3EE"/>
+  <text x="146" y="435" fill="#061018" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Solicitar orçamento</text>
+  <rect x="344" y="398" width="174" height="58" rx="14" fill="#171C27" stroke="#334155"/>
+  <text x="386" y="435" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Ver projetos</text>
+  <rect x="756" y="176" width="342" height="330" rx="22" fill="#0B0F17" stroke="#334155"/>
+  <rect x="790" y="218" width="210" height="24" rx="12" fill="#22D3EE"/>
+  <rect x="790" y="266" width="252" height="18" rx="9" fill="#64748B"/>
+  <rect x="790" y="302" width="178" height="18" rx="9" fill="#475569"/>
+  <rect x="790" y="364" width="274" height="82" rx="18" fill="#141A24" stroke="#293142"/>
+  <text x="820" y="414" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="20">Next.js • React • SEO</text>
+  <rect x="112" y="542" width="968" height="1" fill="#293142"/>
+  <text x="112" y="592" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="18">São Carlos • São Paulo • Brasil</text>
+</svg>

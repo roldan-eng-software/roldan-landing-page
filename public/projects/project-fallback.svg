@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Prévia de projeto em curadoria</title>
+  <desc id="desc">Cartão visual reservado para um projeto publicado que terá screenshot adicionada.</desc>
+  <rect width="1280" height="720" fill="#0A0D12"/>
+  <rect x="72" y="70" width="1136" height="580" rx="32" fill="#111827" stroke="#2A3444" stroke-width="2"/>
+  <path d="M164 192h340M164 246h520M164 300h420" stroke="#94A3B8" stroke-width="28" stroke-linecap="round" opacity=".55"/>
+  <rect x="164" y="390" width="220" height="66" rx="18" fill="#38BDF8"/>
+  <rect x="424" y="390" width="180" height="66" rx="18" fill="#1F2937" stroke="#475569"/>
+  <rect x="760" y="170" width="310" height="350" rx="26" fill="#0F172A" stroke="#334155"/>
+  <path d="M812 270l78 78 70-102 84 150" fill="none" stroke="#22D3EE" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="834" cy="228" r="28" fill="#F97316"/>
+  <text x="164" y="560" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">Projeto pronto para receber screenshot real</text>
+</svg>
