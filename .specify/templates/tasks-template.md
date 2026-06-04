@@ -9,7 +9,9 @@ description: "Task list template for feature implementation"
 
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**Tests**: Release-impacting landing-page work requires the applicable validation
+tasks from the constitution. Include automated tests when rendering, behavior,
+metadata helpers, or regressions can be covered by Jest/React Testing Library.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -22,6 +24,7 @@ description: "Task list template for feature implementation"
 ## Path Conventions
 
 - **Single project**: `src/`, `tests/` at repository root
+- **Production landing page**: `app/`, `app/_components/`, `components/`, `lib/`, `public/`
 - **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
 - Paths shown below assume single project - adjust based on plan.md structure
@@ -63,12 +66,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Confirm affected public routes, metadata, contact paths, and deployment URL assumptions
+- [ ] T005 [P] Identify required responsive and accessibility checks
+- [ ] T006 [P] Identify required SEO, Open Graph, robots, sitemap, JSON-LD, and analytics updates
+- [ ] T007 Confirm asset strategy for images, icons, and fonts
+- [ ] T008 Confirm validation commands and any manual post-deploy checks
+- [ ] T009 Document any constitution violations in plan.md Complexity Tracking
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -84,17 +87,17 @@ Examples of foundational tasks (adjust based on your project):
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T010 [P] [US1] Rendering test for [section/component] in app/__tests__/[name].test.tsx
+- [ ] T011 [P] [US1] Metadata/helper test for [SEO/contact behavior] in app/__tests__/[name].test.tsx
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T012 [P] [US1] Update [section/component] in app/_components/[component].tsx
+- [ ] T013 [P] [US1] Update shared UI in components/[component].tsx if needed
+- [ ] T014 [US1] Compose the story in app/page.tsx
+- [ ] T015 [US1] Update metadata or site helpers in app/layout.tsx, app/sitemap.ts, app/robots.ts, or lib/ if needed
+- [ ] T016 [US1] Add or update static assets in public/ with optimized dimensions and alt text plan
+- [ ] T017 [US1] Verify responsive layout, keyboard access, focus states, and contact links
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -108,14 +111,14 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T018 [P] [US2] Rendering test for [section/component] in app/__tests__/[name].test.tsx
+- [ ] T019 [P] [US2] Metadata/helper test for [SEO/contact behavior] in app/__tests__/[name].test.tsx
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
-- [ ] T021 [US2] Implement [Service] in src/services/[service].py
-- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T020 [P] [US2] Update [section/component] in app/_components/[component].tsx
+- [ ] T021 [US2] Compose the story in app/page.tsx
+- [ ] T022 [US2] Update SEO/contact/assets affected by this story
 - [ ] T023 [US2] Integrate with User Story 1 components (if needed)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
@@ -130,14 +133,14 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T024 [P] [US3] Rendering test for [section/component] in app/__tests__/[name].test.tsx
+- [ ] T025 [P] [US3] Metadata/helper test for [SEO/contact behavior] in app/__tests__/[name].test.tsx
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
-- [ ] T027 [US3] Implement [Service] in src/services/[service].py
-- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T026 [P] [US3] Update [section/component] in app/_components/[component].tsx
+- [ ] T027 [US3] Compose the story in app/page.tsx
+- [ ] T028 [US3] Update SEO/contact/assets affected by this story
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -157,6 +160,11 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
+- [ ] TXXX Run `npm run lint`
+- [ ] TXXX Run `npm test`
+- [ ] TXXX Run `npm run build`
+- [ ] TXXX Validate mobile/tablet/desktop rendering for changed sections
+- [ ] TXXX Validate SEO metadata, Open Graph, robots, sitemap, JSON-LD, analytics, and contact links as applicable
 
 ---
 
@@ -179,11 +187,12 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Within Each User Story
 
-- Tests (if included) MUST be written and FAIL before implementation
-- Models before services
-- Services before endpoints
+- Tests (when applicable) MUST be written and FAIL before implementation
+- Section/component changes before route composition
+- Site helper, metadata, and asset changes before final release checks
 - Core implementation before integration
 - Story complete before moving to next priority
+- SEO/contact/accessibility/performance checks before release
 
 ### Parallel Opportunities
 
@@ -249,4 +258,6 @@ With multiple developers:
 - Verify tests fail before implementing
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
+- Keep production landing-page release gates visible: lint, test, build,
+  responsive checks, accessibility checks, SEO/contact verification
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence

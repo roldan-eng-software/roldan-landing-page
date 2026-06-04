@@ -53,6 +53,10 @@ npm test
 npm run build
 ```
 
+Alterações que afetem rotas públicas, conteúdo, SEO, links de contato,
+analytics, assets, dependências ou renderização também devem seguir a
+constituição em `.specify/memory/constitution.md`.
+
 ## Conteúdo e SEO
 
 Os metadados principais ficam em `app/layout.tsx`, incluindo Open Graph, robots e JSON-LD. O sitemap e o robots estáticos ficam em `public/sitemap.xml` e `public/robots.txt`.

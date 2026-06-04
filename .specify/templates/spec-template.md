@@ -77,6 +77,11 @@
 
 - What happens when [boundary condition]?
 - How does system handle [error scenario]?
+- How does the change behave on mobile, tablet, and desktop viewports?
+- Are contact links, social links, canonical URLs, robots, sitemap, and Open
+  Graph previews still valid after the change?
+- Does the change affect analytics, JSON-LD, search indexing, or deployment URL
+  behavior?
 
 ## Requirements *(mandatory)*
 
@@ -92,6 +97,15 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-SEO**: System MUST preserve or intentionally update public metadata,
+  canonical URLs, Open Graph, JSON-LD, robots, and sitemap entries when routes,
+  branding, content, or deployment URLs change.
+- **FR-CONTACT**: System MUST keep all visitor contact paths functional,
+  including WhatsApp, email, LinkedIn, GitHub, and any other published channels.
+- **FR-A11Y**: System MUST provide semantic structure, keyboard access, visible
+  focus, accessible names, and sufficient contrast for all changed UI.
+- **FR-RESP**: System MUST render without overlap or horizontal scrolling at
+  representative mobile, tablet, and desktop widths.
 
 *Example of marking unclear requirements:*
 
@@ -116,6 +130,11 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **SC-PROD**: Release validation passes with `npm run lint`, `npm test`, and
+  `npm run build`, unless a documented content-only change justifies narrower
+  validation.
+- **SC-PERF**: Changed pages preserve the launch checklist targets of LCP below
+  2.5s and CLS below 0.1, or document the exception and remediation plan.
 
 ## Assumptions
 
