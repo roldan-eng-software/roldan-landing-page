@@ -118,6 +118,27 @@ export const portfolioProjects: PortfolioProject[] = [
     status: "ready",
     linkLabel: "Abrir projeto",
   },
+  {
+    id: "semijoias-three",
+    name: "Simone Semi Joias",
+    url: "https://semijoias-three.vercel.app/",
+    description:
+      "Landing page de moda e semijoias com vitrine elegante, proposta visual premium, navegação de coleção e foco em conversão.",
+    serviceType: "Landing page comercial",
+    tags: ["Next.js", "Semijoias", "E-commerce"],
+    screenshot: {
+      sourceUrl: "https://semijoias-three.vercel.app/",
+      assetPath: "/projects/semijoias-three.png",
+      alt: "Prévia da página inicial da Simone Semi Joias",
+      width: 1280,
+      height: 720,
+      capturedAt: "2026-06-04",
+      captureStatus: "captured",
+    },
+    featured: false,
+    status: "ready",
+    linkLabel: "Abrir projeto",
+  },
 ];
 
 export function isReadyProject(project: PortfolioProject) {

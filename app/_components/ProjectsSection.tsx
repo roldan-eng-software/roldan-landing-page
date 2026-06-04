@@ -21,7 +21,7 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {portfolioProjects.map((project) => (
             <article key={project.id} className="project-card overflow-hidden rounded-lg border border-border bg-bg-card">
               <div className="project-preview relative border-b border-border bg-bg-base">
