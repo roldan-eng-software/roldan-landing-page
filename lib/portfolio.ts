@@ -139,6 +139,27 @@ export const portfolioProjects: PortfolioProject[] = [
     status: "ready",
     linkLabel: "Abrir projeto",
   },
+  {
+    id: "planejados-online2",
+    name: "Roldan Marcenaria",
+    url: "https://planejados-online2.vercel.app/",
+    description:
+      "Landing page para captação de orçamentos de móveis planejados, com formulário guiado, upload de referências e proposta de atendimento rápido.",
+    serviceType: "Landing page comercial",
+    tags: ["Next.js", "Móveis planejados", "Captação de leads"],
+    screenshot: {
+      sourceUrl: "https://planejados-online2.vercel.app/",
+      assetPath: "/projects/planejados-online2.png",
+      alt: "Prévia da página inicial da Roldan Marcenaria",
+      width: 1280,
+      height: 720,
+      capturedAt: "2026-06-04",
+      captureStatus: "captured",
+    },
+    featured: false,
+    status: "ready",
+    linkLabel: "Abrir projeto",
+  },
 ];
 
 export function isReadyProject(project: PortfolioProject) {
