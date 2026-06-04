@@ -8,7 +8,7 @@ import {
 
 describe('portfolio projects', () => {
   it('keeps all configured projects valid for stable rendering', () => {
-    expect(portfolioProjects).toHaveLength(3);
+    expect(portfolioProjects).toHaveLength(4);
 
     for (const project of portfolioProjects) {
       expect(validatePortfolioProject(project)).toBe(true);

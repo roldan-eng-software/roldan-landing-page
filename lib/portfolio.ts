@@ -97,6 +97,27 @@ export const portfolioProjects: PortfolioProject[] = [
     status: "ready",
     linkLabel: "Abrir projeto",
   },
+  {
+    id: "roldan-petshop",
+    name: "PetCare Prime",
+    url: "https://roldan-petshop.vercel.app/",
+    description:
+      "Landing page para petshop premium em Pinheiros, com apresentação de serviços, produtos, dúvidas e chamada direta para WhatsApp.",
+    serviceType: "Landing page comercial",
+    tags: ["Next.js", "Petshop", "WhatsApp"],
+    screenshot: {
+      sourceUrl: "https://roldan-petshop.vercel.app/",
+      assetPath: "/projects/roldan-petshop.png",
+      alt: "Prévia da página inicial do PetCare Prime",
+      width: 1280,
+      height: 720,
+      capturedAt: "2026-06-04",
+      captureStatus: "captured",
+    },
+    featured: false,
+    status: "ready",
+    linkLabel: "Abrir projeto",
+  },
 ];
 
 export function isReadyProject(project: PortfolioProject) {
