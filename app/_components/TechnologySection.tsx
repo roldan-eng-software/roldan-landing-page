@@ -1,18 +1,23 @@
 const technologyGroups = [
   {
-    title: "Interface",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    note: "Componentes, responsividade e performance visual.",
+    title: "Interface e conversão",
+    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Design responsivo"],
+    note: "Landing pages, vitrines e experiências rápidas para transformar visita em contato.",
   },
   {
-    title: "Produto e dados",
-    items: ["Node.js", "PostgreSQL", "Supabase", "Neon"],
-    note: "Fluxos, persistência e integrações de negócio.",
+    title: "Fluxos de negócio",
+    items: ["Formulários", "WhatsApp", "Uploads", "QR Code", "Cálculos web"],
+    note: "Captação de leads, orçamento online, encurtador de links e ferramentas sob medida.",
   },
   {
-    title: "Entrega",
-    items: ["GitHub", "Vercel", "SEO técnico", "Analytics"],
-    note: "Publicação, rastreabilidade e melhoria contínua.",
+    title: "Dados e integração",
+    items: ["Node.js", "PostgreSQL", "Supabase", "Neon", "APIs"],
+    note: "Back-end, persistência e integrações para projetos que precisam continuar crescendo.",
+  },
+  {
+    title: "Publicação e busca",
+    items: ["Vercel", "GitHub", "SEO técnico", "Schema.org", "Analytics"],
+    note: "Deploy em produção, estrutura para buscadores e acompanhamento de performance.",
   },
 ];
 
