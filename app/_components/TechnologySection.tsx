@@ -31,7 +31,7 @@ export default function TechnologySection() {
               Stack com propósito
             </p>
             <h2 className="mt-4 text-3xl font-black text-text-primary sm:text-5xl">
-              Tecnologia aparece no resultado, não na espuma.
+              Tecnologia aparece no resultado, não na aparência.
             </h2>
           </div>
           <div className="grid gap-4">
