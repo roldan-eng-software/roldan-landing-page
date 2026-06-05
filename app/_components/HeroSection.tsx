@@ -15,7 +15,7 @@ export default function HeroSection() {
             Desenvolvedor fullstack
           </p>
           <h1 className="max-w-4xl text-balance text-4xl font-black leading-[1.02] text-text-primary sm:text-6xl lg:text-7xl">
-            Interfaces com gosto de produto. Código com cara de produção.
+            Interfaces com aparência de produto. Código com padrão de produção.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-text-secondary sm:text-xl">
             Eu crio landing pages, sistemas web e aplicações fullstack para quem

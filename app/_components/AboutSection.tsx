@@ -12,9 +12,7 @@ export default function AboutSection() {
         </div>
         <div className="space-y-6 text-lg leading-8 text-text-secondary">
           <p>
-            A Roldan Eng Software é meu estúdio de desenvolvimento web. Eu uno
-            olhar de produto, execução visual e engenharia fullstack para tirar
-            ideias do briefing e colocá-las em produção com consistência.
+            A Roldan Eng Software é meu estúdio de desenvolvimento web. Eu combino visão de produto, execução visual e engenharia full stack para transformar ideias em soluções prontas para vender, escalar e transmitir confiança desde o primeiro contato.
           </p>
           <p>
             O objetivo é simples: criar páginas e sistemas que passam confiança,
